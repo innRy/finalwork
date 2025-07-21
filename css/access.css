@@ -74,6 +74,10 @@ body {
     margin-top: 1em;
 }
 
+.activities-text h2 {
+  margin-bottom: 20px; /* 必要に応じて数値を調整（例: 30px や 40px） */
+  text-align: center;
+}
 
 .map {
     width: 930px;
