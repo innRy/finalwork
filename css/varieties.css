@@ -1,0 +1,82 @@
+/* 品種のエリア背景 */
+.hinsyu {
+    background-color: #f8f8f8;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+
+/* 中見出しのスタイリング */
+.hinsyu h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*写真の大きさを設定*/
+img {
+    width: 250px;
+    height: auto;
+}
+
+/*国旗の写真の大きさを設定*/
+img.flag {
+    width: 30px;
+    height: 20px;
+    margin-left: 5px
+}
+
+/* 中見出しに下線を引く準備 */
+.hinsyu h2::after {
+    content: '';
+    display: block;
+    /* 中見出しの下に短い線を引く */
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 品種リスト */
+.hinsyu-list {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    /* はみ出た部分を横スクロールで表示 */
+    overflow: scroll;
+}
+
+/* 品種を表示する幅 */
+.hinsyu-list li {
+    flex-shrink: 0;
+    width: 2000px;
+    margin-left: 100px;
+}
+
+/* １種目の品種の左余白*/
+.hinsyu-list li:first-child {
+    margin-left: 0;
+}
+
+/*品種名の文字*/
+.hinsyu-list dt {
+    font-weight: 700;
+    color: #a52a2a
+}
+
+@media (max-width: 800px) {
+    /* 品種リストの余白 */
+    .hinsyu-list {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* 品種欄の余白 */
+    .hinsyu-list li {
+        width: 220px;
+        margin-left: 30px;
+    }
+}
