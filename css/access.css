@@ -63,11 +63,6 @@ body {
     
 }
 
-.activities-text h2 {
-    margin-bottom: 1em; /* または好みに合わせて 20px や 30px に調整可 */
-}
-
-
 .activities-text ul {
     list-style-type: disc; /* または circle, square でもOK */
     padding-left: 20px;     /* 箇条書きのインデントを確保 */
