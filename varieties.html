@@ -2,77 +2,123 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>メンバー</title>
-        <meta name="description" content="メンバー">
+        <title>ねことくらすHP</title>
+        <link href="css/varieties.css" rel="stylesheet">
+        <meta name="description" content="ねこの品種">
         <meta name="viewport" content="width=device-width">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
-        <link href="css/common.css" rel="stylesheet">
-        <link href="css/members.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet"> 
+        <script src="js/toggle-menu.js"></script>
     </head>
     <body>
+        <!-- ここからheader -->
         <header class="header">
             <div class="header-inner">
                 <a class="header-logo" href="index.html">
                     <img src="images/common/logo.png" alt="ロゴ">
                 </a>
+                <!-- モバイル表示用のbuttonタグ -->
                 <button class="toggle-menu-button"></button>
+                <!-- ナビゲーション -->
                 <div class="header-site-menu">
                     <nav class="site-menu">
                         <ul>
-                            <li><a href="concept.html">コンセプト</a></li>
-                            <li><a href="members.html">メンバー</a></li>
-                            <li><a href="access.html">アクセス</a></li>
+                            <li><a href="varieties.html">品種</a></li>
+                            <li><a href="habits.html">習性</a></li>
+                            <li><a href="keep.html">飼い方</a></li>
+                            <li><a href="access.html">保護活動</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
+        <!-- ここからmain -->
         <main class="main">
-            <div class="members">
-                <h2>Members</h2>
-                <ul class="member-list">
+            <div class="title">
+                <h1>Hinsyu</h1>
+                <ul class="hinsyu-list">
                     <li>
-                        <img src="images/members/member_A.png" alt="メンバーA">
+                        <img src="images/varieties/american.jpg" alt="アメリカンショートヘアー">
                         <dl>
-                            <dt>メンバーA</dt>
-                            <dd>研究テーマ: 自然言語処理</dd>
+                            <dt>アメリカンショートヘアー</dt>
+                            <dd>性格: 温厚で物怖じせず，他の猫や環境への順応性も高い</dd>
+                            <dd>体重: 3 ~ 6 kg</dd>
+                            <dd>特徴: 体や顔に渦巻き模様（タビー）</dd>
                         </dl>
-                        <p class="speciality">専門分野: 自然言語処理</p>
+                        <p class="country">原産国: アメリカ
+                        <img src="images/varieties/USA_frag.png" alt="アメリカ国旗" class="flag">
+                        </p>
                     </li>
                     <li>
-                        <img src="images/members/member_B.png" alt="メンバーB">
+                        <img src="images/varieties/scottish.jpg" alt="スコティッシュフォールド">
                         <dl>
-                            <dt>メンバーB</dt>
-                            <dd>研究テーマ: コンピュータグラフィックス</dd>
+                            <dt>スコティッシュフォールド</dt>
+                            <dd>性格: とても穏やかだが甘えん坊な一面もある</dd>
+                            <dd>体重: 2.7 ~ 4.7 kg</dd>
+                            <dd>特徴: 前向きに折れ曲がった小さい耳と丸みを帯びた体系</dd>
                         </dl>
-                        <p class="speciality">専門分野: CG/HI/画像処理</p>
+                        <p class="country">原産国: スコットランド
+                        <img src="images/varieties/Scotto_frag.png" alt="スコットランド国旗" class="flag">
+                        </p>
                     </li>
                     <li>
-                        <img src="images/members/member_C.png" alt="メンバーC">
+                        <img src="images/varieties/mantikan_1.jpg" alt="マンチカン">
                         <dl>
-                            <dt>メンバーC</dt>
-                            <dd>研究テーマ: バーチャルリアリティ</dd>
+                            <dt>マンチカン</dt>
+                            <dd>性格: 活発で社交的なタイプが多く，飼い主に対してすぐすり寄る，甘えん坊な一面もある</dd>
+                            <dd>体重: ~ 4.5 kg</dd>
+                            <dd>特徴: 短い足と丸みのあるくさび形の顔</dd>
                         </dl>
-                        <p class="speciality">専門分野: VR/五感インタフェース</p>
+                        <p class="country">原産国: アメリカ
+                        <img src="images/varieties/USA_frag.png" alt="アメリカ国旗" class="flag">
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/varieties/ragamuffin.jpg" alt="ラガマフィン">
+                        <dl>
+                            <dt>ラガマフィン</dt>
+                            <dd>性格: 穏やかで優しく，「猫のテディベア」と呼ばれる</dd>
+                            <dd>体重: 4.5 ~ 9 kg</dd>
+                            <dd>特徴: 大きなぬいぐるみのような愛らしさがある</dd>
+                        </dl>
+                        <p class="country">原産国: アメリカ
+                        <img src="images/varieties/USA_frag.png" alt="アメリカ国旗" class="flag">
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/varieties/russian.jpg" alt="ロシアンブルー">
+                        <dl>
+                            <dt>ロシアンブルー</dt>
+                            <dd>性格: 頭がよく，飼い主に忠実でなつきやすい</dd>
+                            <dd>体重: 2.8 ~ 4.7 kg</dd>
+                            <dd>特徴: 大きな丸いエメラルドグリーンの瞳</dd>
+                        </dl>
+                        <p class="country">原産国: ロシア
+                        <img src="images/varieties/Rusia_frag.jpg" alt="ロシア国旗" class="flag">
+                        </p>
                     </li>
                 </ul>
             </div>
         </main>
+        <!-- ここからfooter -->
         <footer class="footer">
+            <!-- ナビゲーション -->
             <nav class="site-menu">
                 <ul>
-                    <li><a href="concept.html">コンセプト</a></li>
-                    <li><a href="members.html">メンバー</a></li>
-                    <li><a href="access.html">アクセス</a></li>
+                    <li><a href="varieties.html">品種</a></li>
+                    <li><a href="habits.html">習性</a></li>
+                    <li><a href="keep.html">飼い方</a></li>
+                    <li><a href="access.html">保護活動</a></li>
                 </ul>
             </nav>
             <a class="footer-logo" href="index.html">
                 <img src="images/common/logo_footer.png" alt="ロゴ">
             </a>
-            <p class="copyright"><small>&copy;名城大学情報工学部(嘘)</small></p>
+            <p class="copyright"><small>&copy;名城大学情報工学部学生</small></p>
         </footer>
     </body>
 </html>
