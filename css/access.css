@@ -1,13 +1,54 @@
-
+@charset "utf-8";
 
 .site-menu a {
     font-family: "Kaisei Tokumin", serif !important;
     font-weight: 400;
     font-style: normal;
+    color: inherit;               /* ← 親要素の色を継承（＝黒などに揃える） */
+    text-decoration: none;  
 }
 
+.header-logo {
+    display: block;
+    width: 170px;         /* お好みで。100〜150pxが一般的 */
+    height: auto;
+}
+
+header .site-menu ul {
+    list-style-type: none;  /* ← ポチを非表示にする */
+    padding-left: 0;        /* ← 左側の余白もリセット（必要に応じて） */
+    margin: 0;              /* ← デフォルトの余白も消すとスッキリ */
+}
+
+
+.header-inner {
+  max-width: 1200px;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-menu ul {
+  display: flex;
+}
+.site-menu ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.site-menu ul {
+    display: flex;
+}
+
+.site-menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
 .title {
-    width: 930px;
+    width: 100%;
+    max-width: 930px;
     margin-left: auto;
     margin-right: auto;
     font-family: "Kaisei Tokumin",serif;
@@ -25,6 +66,10 @@
     align-items: center;
     color: #ffffff;
     text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.toggle-menu-button {
+    display: none;
 }
 
 .title h1 span {
@@ -74,12 +119,90 @@ body {
   text-align: center;
 }
 
+@media (max-width: 800px) {
+    .site-menu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .site-menu li {
+        margin-top: 20px;
+    }
+
+    .header {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        height: 50px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+    }
+
+    .header-site-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: #ffffff;
+        background-color: #736e62;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: none;
+    }
+
+    .header-site-menu.is-show {
+        display: block;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .main {
+        padding-top: 50px;;
+    }
+
+    .footer-logo {
+        margin-top: 60px;
+    }
+
+    .copyright {
+        margin-top: 50px;
+    }
+
+    .toggle-menu-button {
+        display: block;
+        width: 44px;
+        height: 34px;
+        position: absolute;
+        right: 20px;
+        background-image: url(../images/common/icon-menu.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+}
+
 .map {
     width: 930px;
     max-width: 90%;
     margin-top: 75px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 75px;
 }
 
 .map iframe {
@@ -87,4 +210,41 @@ body {
     width: 100%;
     height: 600px;
     margin-top: 25px;
+}
+
+.footer {
+    background-color: #6B4C3B; /* ← おすすめの茶色（こげ茶系） */
+    color: #ffffff;           /* ← 白文字で見やすく */
+    padding: 40px 0;
+    text-align: center;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 30px auto;  /* ← 上下中央揃え、下に余白を追加 */
+    width: 120px;              /* ← 適切なロゴサイズに調整 */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer .site-menu {
+    margin-bottom: 20px;       /* ← 必要に応じて他要素との余白調整 */
+}
+
+footer .site-menu a {
+    font-family: "Kaisei Tokumin", serif !important;
+    font-weight: 400;
+    font-style: normal;
+    color: inherit;               /* ← 親要素の色を継承（＝黒などに揃える） */
+    text-decoration: none;  
+}
+
+.footer .site-menu ul {
+    display: inline-flex;
+    list-style-type: none;  /* ← ポチを非表示にする */
+    padding-left: 0;        /* ← 左側の余白もリセット（必要に応じて） */
+    margin: 0 auto;              /* ← デフォルトの余白も消すとスッキリ */
+    gap: 40px;
 }
