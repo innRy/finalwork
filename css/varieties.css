@@ -1,9 +1,11 @@
+
 /* 品種のエリア背景 */
 .hinsyu {
     background-color: #f8f8f8;
     padding-top: 45px;
     padding-bottom: 55px;
 }
+
 
 /* 中見出しのスタイリング */
 .hinsyu h2 {
@@ -30,6 +32,7 @@ img.flag {
     content: '';
     display: block;
     /* 中見出しの下に短い線を引く */
+  
     width: 36px;
     height: 3px;
     background-color: #000000;
@@ -40,11 +43,13 @@ img.flag {
 
 /* 品種リスト */
 .hinsyu-list {
+  
     display: flex;
     padding-top: 40px;
     padding-bottom: 10px;
     padding-left: 60px;
     padding-right: 60px;
+  
     /* はみ出た部分を横スクロールで表示 */
     overflow: scroll;
 }
@@ -73,6 +78,7 @@ img.flag {
         padding-left: 20px;
         padding-right: 20px;
     }
+
 
     /* 品種欄の余白 */
     .hinsyu-list li {
