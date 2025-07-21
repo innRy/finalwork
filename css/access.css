@@ -1,8 +1,73 @@
+
+
+.site-menu a {
+    font-family: "Kaisei Tokumin", serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .title {
     width: 930px;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Kaisei Tokumin",serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 380px;
+    background-image: url(../images/access/S__2195482.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #4b2c14;
 }
+
+.title h1 span {
+    position: relative;
+    padding: 0 1em;
+    background: #fff;
+}
+
+body {
+    background-color: #f5f0dc; /* 全体背景：柔らかいベージュ */
+}
+
+.activities {
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px auto;
+    width: 930px;
+    max-width: 90%;
+
+    font-family: "Kaisei Tokumin",serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.activities.reverse {
+    justify-content: flex-end;
+}
+
+
+.activities-text {
+    background-color: #fff; /* 文字部分の背景 */
+    border-radius: 15px;     /* 角を丸く */
+    padding: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.activities-text ul {
+    list-style-type: disc; /* または circle, square でもOK */
+    padding-left: 20px;     /* 箇条書きのインデントを確保 */
+    margin-top: 1em;
+}
+
 
 .map {
     width: 930px;
