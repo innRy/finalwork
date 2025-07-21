@@ -292,80 +292,158 @@ img {
     font-size: 20px;
 }
 
-/*背景画面の設定*/
-/*.title {
-    height: 310px;
-    background-image: url(../images/hinsyu.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    color: #ffffff;
-    text-shadow: 1px 1px 10px #4b2c14;
-}*/
 
-/*見出しの設定*/
-/*.title h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 32pt;
-    font-weight: bold;
+
+/*背景*/
+body {
+    background-color: #d6837b;
+    margin: 0;
+    font-family: sans-serif;
 }
 
-/*サブタイトルの設定*/
-/*.title p {
-    font-size: 14pt;
-    margin-top: 15px;
-}*/
+/*カードの位置を制御*/
+.syusei-wrapper {
+    display: flex; /* Flexboxを適用 */
+    justify-content: flex-start; /* デフォルトで左寄せ */
+    width: 100%; /* 全幅を使用 */
+    padding: 0 20px; /* 左右の余白 */
+    box-sizing: border-box; /* paddingを含めて幅を計算 */
+}
+
+/* 偶数番目（.reverse クラスが付いている場合）は右寄せ */
+.syusei-wrapper.reverse {
+    justify-content: flex-end; /* 右寄せ */
+}
+
+.syusei {
+    background-color: #f3d4d1;
+    padding: 30px;
+    width: 60%; /*カードの幅*/
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+
+/* 左寄せカードの余白 */
+.syusei-wrapper:not(.reverse) .syusei {
+    margin-left: 30px;
+    margin-right: 0; /* 明示的に0に設定 */
+}
+
+/* 右寄せカードの余白 */
+.syusei-wrapper.reverse .syusei {
+    margin-right: 30px;
+    margin-left: 0; /* 明示的に0に設定 */
+}
+
+.syusei.reverse {
+    flex-direction: row-reverse; /* 要素の並び順を反転 */
+}
+
+/* レスポンシブ対応の調整 */
+@media (max-width: 800px) {
+    .syusei-wrapper {
+        padding: 0; /* モバイルではwrapperのpaddingをなくす */
+        justify-content: center; /* モバイルではカードを中央寄せ */
+    }
+
+    .syusei-wrapper.reverse {
+        justify-content: center; /* モバイルではカードを中央寄せ */
+    }
+
+    .syusei {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+        width: 90%; /* モバイルでのカード幅 */
+        margin-left: auto; /* モバイルでは中央寄せにするためauto */
+        margin-right: auto; /* モバイルでは中央寄せにするためauto */
+    }
+    /* モバイルでは左右の余白をなくし中央寄せにする */
+    .syusei-wrapper:not(.reverse) .syusei,
+    .syusei-wrapper.reverse .syusei {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* その他のモバイルスタイルは前回の内容と同じ */
+    .syusei.reverse {
+        flex-direction: column;
+    }
+
+    .habits-image-container {
+        width: 80%;
+        max-width: 250px;
+        margin-top: 15px;
+    }
+
+    .syusei-text {
+        margin-top: 15px;
+    }
+
+    .syusei-text h2 {
+        font-size: 24px;
+    }
+
+    .syusei-text p {
+        font-size: 16px;
+    }
+
+    .ng-codo h2 {
+        font-size: 24px;
+    }
+    .ng-codo p, .ng-codo ul li {
+        font-size: 16px;
+    }
+    .nothabits {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+.syusei-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.habits {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
 
 /*.習性エリアの設定*/
-.syusei {
-    /*幅と最大値*/
-    display: flex;
-    gap: 75px;
-    /*flex-direction: row;
-    justify-content: space-between;
-    width: 1500px;
-    max-width: 50%;
-    /*上下・左右の表示位置の調整*/
-    /*margin-top: flex;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: flex-start;*/
-}
+
 
 /*テキストエリアの調整*/
-.syusei-text{
-    max-width: 500px;
-    margin-right: 40px;
-}
+
 
 /*習性の写真の大きさ*/
-.habits {
-    width: 300px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+
+
+
 
 /*偶数番目のエリアを左右反転*/
-.reverse {
-    flex-direction: row-reverse;
+.syusei.reverse {
+    margin-left: auto;
+    margin-right: 0;
+    /*margin: 40px auto 40px 0; /* 左寄せ */
 }
 
 /*左右の余白も反転*/
 .reverse .syusei-text {
     margin-left: 40px;
-    margin-right: 0;
+    margin-right: 30px;
 }
 
 /*中見出しのスタイル変更*/
 /*syusei-textクラスのみ*/
 .syusei-text h2 {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 30px;
 }
@@ -383,7 +461,7 @@ img {
 /*コンセプト分のスタイル調整*/
 /*syusei-textクラスのみ*/
 .syusei-text p {
-    font-size: 15px;
+    font-size: 20px;
     line-height: 28px;
     margin-top: 25px;
 }
@@ -396,25 +474,24 @@ img {
 .ng-codo {
     width: 930px;
     max-width: 90%;
-    background-color:#383838;
+    background-color:#f9e2de;
     padding: 50px 60px;
     margin-top: 55px;
     margin-left: auto;
     margin-right: auto;
-    color: #ffffff;
 }
 
 /*NG行動エリアの見出しのスタイル*/
 /*ねこのいやなこと*/
 .ng-codo h2{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
 
 /*NG行動コメントのスタイル*/
 .ng-codo p {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 28px;
     margin-top: 20px;
     text-align: center;
@@ -425,8 +502,14 @@ img {
     display: block;
     width: 400px;
     height: auto;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.ng-codo ul{
+    margin-top: 30px;
+    font-size: 20;
 }
 
 /*見出しの下に短い下線*/
