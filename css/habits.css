@@ -28,7 +28,7 @@
 }
 
 /*ページの最初の大きい画像*/
-.first-view{
+.first-view-habits {
     height: calc(100vh - 110px);
     background-image: url(../images/habits/omoshiro_big_2.jpg);
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 }
 
 /*ページの大きいタイトル*/
-.first-view-text{
+.first-view-text-habits{
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -51,28 +51,15 @@
     text-shadow: 1px 1px 10px #4d2c14;
 }
 
-/*タイトルとか*/
-.first-view-text {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-bottom: 80px;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #4b2c14;
-}
-
 /*一番のタイトル*/
-.first-view-text h1 {
+.first-view-text-habits h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 56px;
     line-height: 72px;
 }
 
 /*2番目のタイトル*/
-.first-view-text p {
+.first-view-text-habits p {
     font-size: 18px;
     margin-top: 20px;
 }
