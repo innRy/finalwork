@@ -2,75 +2,109 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>コンセプト</title>
-        <meta name="description" content="情報工学部のコンセプト">
+        <title>ねことくらすHP</title>
+        <link href="css/hinsyu.css" rel="stylesheet">
+        <meta name="description" content="習性">
         <meta name="viewport" content="width=device-width">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
-        <link href="css/common.css" rel="stylesheet">
-        <link href="css/concept.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet"> 
+        <script src="js/toggle-menu.js"></script>
     </head>
     <body>
+
+        <!-- ここからheader -->
         <header class="header">
             <div class="header-inner">
                 <a class="header-logo" href="index.html">
                     <img src="images/common/logo.png" alt="ロゴ">
                 </a>
+                <!-- モバイル表示用のbuttonタグ -->
                 <button class="toggle-menu-button"></button>
+                <!-- ナビゲーション -->
                 <div class="header-site-menu">
                     <nav class="site-menu">
                         <ul>
-                            <li><a href="concept.html">コンセプト</a></li>
-                            <li><a href="members.html">メンバー</a></li>
-                            <li><a href="access.html">アクセス</a></li>
+                            <li><a href="varieties.html">品種</a></li>
+                            <li><a href="habits.html">習性</a></li>
+                            <li><a href="keep.html">飼い方</a></li>
+                            <li><a href="access.html">保護活動</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
+
+        <!-- ここからmain -->
         <main class="main">
             <div class="title">
-                <h1>Concept</h1>
-                <p>情報工学部について</p>
+                <h1>Syusei</h1>
+                <p>ねこの習性</p>
             </div>
-            <div class="feature">
-                <div class="feature-text">
-                    <h2>コースとプログラムの組み合わせによる多彩な学び</h2>
-                    <p>一人ひとりの興味や適性，目指す将来に応じて，学びを組み立てることができます．</p>
-                </div>    
+            <div class="syusei"></div>
+                <div class="syusei-text">
+                    <h2>高いところが好き</h2>
+                    <img src="images/syusei/takai.jpg" alt="高いところ">
+                    <p>猫の本能であり，外敵から身を守ったり，獲物を見つけやすいため</p>
+                </div>
             </div>
-            <div class="feature reverse">
-                <div class="feature-text">
-                    <h2>理工学部のモノづくりマインドが源流</h2>
-                    <p>理工学部のDNAを受け継ぎ，教育の源流には「創造型実学」の精神があります．</p>
-                </div>    
+            <div class="syusei reverse">
+                <div class="syusei-text">
+                    <h2>狭いところを好む</h2>
+                    <img src="images/syusei/semaitokoro.jpg" alt="狭いところ">
+                    <p>猫にとって安心できる場所！</p>
+                </div>
             </div>
-            <div class="feature">
-                <div class="feature-text">
-                    <h2>実社会を想定したPBL (Project Based Learning) の導入</h2>
-                    <p>社会の中の複雑な課題に対し，チームで数ケ月かけて開発する経験を通じて体験的に学ぶスタイルを取り入れます．</p>
-                </div>    
+            <div class="syusei">
+                <div class="syusei-text">
+                    <h2>爪とぎをする</h2>
+                    <img src="images/syusei/tsumetogi.jpg" alt="爪とぎ">
+                    <p>猫の縄張り意識が強いのも，単独行動を好むため</p>
+                </div>
             </div>
-            <div class="movie">
-                <h2>名城大学情報工学部のHP</h2>
-                <iframe src="https://www.youtube.com/embed/AxMAMQrBUtE?si=WVzZ4Rc2NBfGyFZn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>情報工学部の紹介動画</p>
+            <div class="syusei reverse">
+                <div class="syusei-text">
+                    <h2>よく寝る</h2>
+                    <img src="images/syusei/neteru.jpg" alt="寝る">
+                    <p>猫は１日のうちの15時間前後を寝て過ごす</p>
+                </div>
+            </div>
+            
+            <div class="ng-codo">
+                <h2>ねこのNG行動まとめ</h2>
+                <img src="images/syusei/oko_2.jpg" alt="不機嫌">
+                <ul>
+                    <li>猫が集中しているときに無理やりかまう</li>
+                    <li>猫が嫌がるまでスキンシップする</li>
+                    <li>来客</li>
+                    <li>大きな音</li>
+                    <li>同居猫との不仲</li>
+                    <li>引っ越し</li>
+                    <li>車や電車に乗る</li>
+                    <li>香水や芳香剤</li>
+                </ul>
+                <p>これらのことに気を付けてねこと良好な関係を築こう！！</p>
             </div>
         </main>
+
+        <!-- ここからfooter -->
         <footer class="footer">
+            <!-- ナビゲーション -->
             <nav class="site-menu">
                 <ul>
-                    <li><a href="concept.html">コンセプト</a></li>
-                    <li><a href="members.html">メンバー</a></li>
-                    <li><a href="access.html">アクセス</a></li>
+                    <li><a href="varieties.html">品種</a></li>
+                    <li><a href="habits.html">習性</a></li>
+                    <li><a href="keep.html">飼い方</a></li>
+                    <li><a href="access.html">保護活動</a></li>
                 </ul>
             </nav>
             <a class="footer-logo" href="index.html">
                 <img src="images/common/logo_footer.png" alt="ロゴ">
             </a>
-            <p class="copyright"><small>&copy;名城大学情報工学部(嘘)</small></p>
+            <p class="copyright"><small>&copy;名城大学情報工学部学生</small></p>
         </footer>
     </body>
 </html>
