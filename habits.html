@@ -3,26 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>ねことくらすHP</title>
-        <link href="css/hinsyu.css" rel="stylesheet">
-        <meta name="description" content="習性">
+        <meta name="description" content="ねことくらすHP">
         <meta name="viewport" content="width=device-width">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
-        <link href="css/index.css" rel="stylesheet">
+        <link href="css/habits.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet"> 
-        <script src="js/toggle-menu.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     </head>
+
     <body>
-        
-
         <!-- ここからheader -->
-
         <header class="header">
             <div class="header-inner">
                 <a class="header-logo" href="index.html">
-                    <img src="images/common/logo.png" alt="ロゴ">
+                    <img src="images/common/neko_logo.jpg" alt="ロゴ">
                 </a>
                 <!-- モバイル表示用のbuttonタグ -->
                 <button class="toggle-menu-button"></button>
@@ -39,56 +35,105 @@
                 </div>
             </div>
         </header>
+
         <!-- ここからmain -->
-        <main class="main">
-            <div class="title">
-                <h1>Syusei</h1>
-                <p>ねこの習性</p>
+        <main class="main-habits">
+            <nav class="floating-habits">
+                
+            </nav>
+
+            <!-- first-view -->
+            <div class="first-view-habits">
+                <div class="first-view-text-habits">
+                    <h1>Habits</h1>
+                    <p>ねこの習性</p>
+                    <div class="lead-habits">
+                        <p>このページではねこの習性やNG行動などについて説明します</p>
+                    </div>
+                </div>
             </div>
-            <div class="syusei"></div>
+
+            <div class="syusei">
                 <div class="syusei-text">
                     <h2>高いところが好き</h2>
-                    <img src="images/syusei/takai.jpg" alt="高いところ">
+                    <img src="images/habits/takai.jpg" alt="高いところ" class="habits">
                     <p>猫の本能であり，外敵から身を守ったり，獲物を見つけやすいため</p>
                 </div>
             </div>
             <div class="syusei reverse">
                 <div class="syusei-text">
                     <h2>狭いところを好む</h2>
-                    <img src="images/syusei/semaitokoro.jpg" alt="狭いところ">
+                    <img src="images/habits/semaitokoro.jpg" alt="狭いところ" class="habits">
                     <p>猫にとって安心できる場所！</p>
                 </div>
             </div>
             <div class="syusei">
                 <div class="syusei-text">
                     <h2>爪とぎをする</h2>
-                    <img src="images/syusei/tsumetogi.jpg" alt="爪とぎ">
+                    <img src="images/habits/tsumetogi.jpg" alt="爪とぎ" class="habits">
                     <p>猫の縄張り意識が強いのも，単独行動を好むため</p>
                 </div>
             </div>
             <div class="syusei reverse">
                 <div class="syusei-text">
                     <h2>よく寝る</h2>
-                    <img src="images/syusei/neteru.jpg" alt="寝る">
+                    <img src="images/habits/neteru.jpg" alt="寝る" class="habits">
                     <p>猫は１日のうちの15時間前後を寝て過ごす</p>
                 </div>
             </div>
             
-            <div class="ng-codo">
-                <h2>ねこのNG行動まとめ</h2>
-                <img src="images/syusei/oko_2.jpg" alt="不機嫌">
-                <ul>
-                    <li>猫が集中しているときに無理やりかまう</li>
-                    <li>猫が嫌がるまでスキンシップする</li>
-                    <li>来客</li>
-                    <li>大きな音</li>
-                    <li>同居猫との不仲</li>
-                    <li>引っ越し</li>
-                    <li>車や電車に乗る</li>
-                    <li>香水や芳香剤</li>
-                </ul>
-                <p>これらのことに気を付けてねこと良好な関係を築こう！！</p>
-            </div>
+
+<div class="ng-codo">
+    <h2>ねこのいやなこと</h2>
+    <p>以下のことに気を付けてねこと良好な関係を築こう！！</p>
+    <p>チェックボックスを押すとねこの表情がかわるよ！</p>
+    <img id="cat-image" src="images/habits/oko_2.jpg" alt="不機嫌" class="nothabits">
+    <form>
+        <ul>
+            <li><label><input type="checkbox" class="cat-check"> 猫が集中しているときに無理やりかまう</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 猫が嫌がるまでスキンシップする</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 来客</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 大きな音</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 同居猫との不仲</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 引っ越し</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 車や電車に乗る</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 香水や芳香剤</label></li>
+        </ul>
+    </form>
+</div>
+
+<script>
+    const checkboxes = document.querySelectorAll('.cat-check');
+    const catImage = document.getElementById('cat-image');
+
+    function updateImage() {
+        let checkedCount = 0;
+        checkboxes.forEach(cb => {
+            if (cb.checked) checkedCount++;
+        });
+
+        // 条件に応じて画像変更
+        if (checkedCount === 0) {
+            catImage.src = "images/habits/oko_2.jpg"; // 不機嫌
+        } else if (checkedCount <= 3) {
+            catImage.src = "images/habits/human.jpg"; // 少し不満げな猫
+        } else if (checkedCount <= 6) {
+            catImage.src = "images/habits/hutsu.jpg"; // 怖がってる猫
+        } else {
+            catImage.src = "images/habits/egao.jpg"; // 激おこ猫
+        }
+    }
+
+    // チェックボックスの変更を監視
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', updateImage);
+    });
+
+    // 初期画像設定
+    updateImage();
+</script>
+
+
         </main>
 
         <!-- ここからfooter -->
@@ -103,9 +148,9 @@
                 </ul>
             </nav>
             <a class="footer-logo" href="index.html">
-                <img src="images/common/logo_footer.png" alt="ロゴ">
+                <img src="images/common/IMG_2035.JPG" alt="ロゴ">
             </a>
-            <p class="copyright"><small>&copy;名城大学情報工学部学生</small></p>
+            <p class="copyright"><small>&copy;名城大学情報工学部学生(偽)</small></p>
         </footer>
     </body>
 </html>
