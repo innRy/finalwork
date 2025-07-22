@@ -104,9 +104,14 @@ img {
 }
 
 .header-logo {
-    display: block;
-    width: 50px;
-    height: auto;
+    margin-left: 20px;
+}
+
+.header-logo img {
+    height: 50px;      /* ロゴ画像の高さを固定 */
+    width: auto;       /* 幅は画像比率に合わせて調整 */
+    object-fit: contain;
+    display: block;    /* インラインスペース防止 */
 }
 
 .site-menu ul {
