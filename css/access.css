@@ -234,7 +234,7 @@ body {
 }
 
 .footer-logo {
-    display: block;
+    display: inline-block;
     margin: 0 auto 30px auto;  /* ← 上下中央揃え、下に余白を追加 */
     width: 120px;              /* ← 適切なロゴサイズに調整 */
     height: auto;
