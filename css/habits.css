@@ -1,115 +1,552 @@
-.title {
-    height: 310px;
-    background-image: url(../images/concept/bg-main.jpg);
+@charset "utf-8";
+
+
+/*ヘッダー*/
+.img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+nav.floating {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: #d0d0d0;
+}
+
+.first-view-habits {
+    height: calc(100vh - 110px);
+    background-image: url(../images/habits/hutsu_big.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-items: center;
+}
+
+.first-view-text-habits {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40ox;
+    padding-bottom: 80px;
     color: #ffffff;
+    font-weight: bold;
     text-shadow: 1px 1px 10px #4b2c14;
 }
 
-.title h1 {
+.first-view-text-habits h1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 32pt;
-    font-weight: bold;
+    font-size: 56px;
+    line-height: 72px;
 }
 
-.title p {
-    font-size: 14pt;
-    margin-top: 15px;
+.first-view-text-habits p {
+    font-size: 18px;
+    margin-top: 20px;
 }
 
-.feature {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 930px;
-    max-width: 90%;
-    margin-top: 75px;
+.lead-habits {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16pt;
+    color: #000000;
+    line-height: 1;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    background-color: #ffffff;
+}
+
+.header-inner {
+    max-width: 1200px;
+    height: 110px;
     margin-left: auto;
     margin-right: auto;
-    align-items: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.feature-text {
+.toggle-menu-button {
+    display: none;
+}
+
+.header-logo {
+    display: block;
+    width: 100px;
+}
+
+.site-menu ul {
+    display: flex;
+}
+
+.site-menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.site-menu ul li a {
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+@media (max-width: 800px) {
+    .site-menu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .site-menu li {
+        margin-top: 20px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        height: 50px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+    }
+
+    .header-site-menu {
+    position: fixed; /* ← fixed に変更 */
+    top: 50px; /* ← headerの高さ分下げる */
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #736e62;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+    z-index: 9; /* headerの下に表示させる */
+    }
+
+
+    .header-site-menu.is-show {
+        display: block;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .header-logo img {
+        width: 100%;
+        height:auto;
+        display: block;
+    }
+
+    .main {
+        padding-top: 50px;;
+    }
+
+    .footer-logo {
+        width: 150px;
+        margin-top: 60px;
+    }
+
+    .footer-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .copyright {
+        margin-top: 50px;
+    }
+
+    .toggle-menu-button {
+        display: block;
+        width: 44px;
+        height: 34px;
+        background-image: url(../images/common/icon-menu.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+}
+.footer {
+    color: #ffffff;
+    background-color: #6b4c3b;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    width: 235px;
+    margin-top: 90px;
+}
+
+.copyright {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 90px;
+}
+
+
+.header-inner {
+    max-width: 1200px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*.toggle-menu-button {
+    display: none;
+}*/
+
+.header-logo {
+    display: block;
+    width: 170px;
+}*/
+
+/*header終了*/
+
+/*ページの最初の大きい画像*/
+.first-view-habits {
+    margin-top: 110px;
+    height: calc(100vh - 110px);
+    background-image: url(../images/habits/hutsu_big.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+/*ページの大きいタイトル*/
+.first-view-text-habits{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-bottom: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #4d2c14;
+}
+
+
+/*一番のタイトル*/
+.first-view-text-habits h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 56px;
+    line-height: 72px;
+}
+
+/*2番目のタイトル*/
+.first-view-text-habits p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/*ページの説明*/
+.lead-habits {
+    max-width: 1200px;
+    margin: 60px auto;
+    font-size: 20px;
+}
+
+/*背景*/
+body {
+    background-color: #d6837b;
+    margin: 0;
+    font-family: sans-serif;
+    color: #412625;
+}
+
+/*カードの位置を制御*/
+.syusei-wrapper {
+    display: flex; /* Flexboxを適用 */
+    justify-content: flex-start; /* デフォルトで左寄せ */
+    width: 100%; /* 全幅を使用 */
+    padding: 0 20px; /* 左右の余白 */
+    box-sizing: border-box; /* paddingを含めて幅を計算 */
+}
+
+/* 偶数番目（.reverse クラスが付いている場合）は右寄せ */
+.syusei-wrapper.reverse {
+    justify-content: flex-end; /* 右寄せ */
+}
+
+.syusei {
+    background-color: #f8e7e6;
+    padding: 30px;
+    width: 60%; /*カードの幅*/
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+
+/* 左寄せカードの余白 */
+.syusei-wrapper:not(.reverse) .syusei {
+    margin-left: 30px;
+    margin-right: 0; /* 明示的に0に設定 */
+}
+
+/* 右寄せカードの余白 */
+.syusei-wrapper.reverse .syusei {
+    margin-right: 30px;
+    margin-left: 0; /* 明示的に0に設定 */
+}
+
+.syusei.reverse {
+    flex-direction: row-reverse; /* 要素の並び順を反転 */
+}
+
+/* レスポンシブ対応の調整 */
+@media (max-width: 800px) {
+    .syusei-wrapper {
+        padding: 0; /* モバイルではwrapperのpaddingをなくす */
+        justify-content: center; /* モバイルではカードを中央寄せ */
+    }
+
+    .syusei-wrapper.reverse {
+        justify-content: center; /* モバイルではカードを中央寄せ */
+    }
+
+    .syusei {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+        width: 90%; /* モバイルでのカード幅 */
+        margin-left: auto; /* モバイルでは中央寄せにするためauto */
+        margin-right: auto; /* モバイルでは中央寄せにするためauto */
+    }
+    /* モバイルでは左右の余白をなくし中央寄せにする */
+    .syusei-wrapper:not(.reverse) .syusei,
+    .syusei-wrapper.reverse .syusei {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* その他のモバイルスタイルは前回の内容と同じ */
+    .syusei.reverse {
+        flex-direction: column;
+    }
+
+    .habits-image-container {
+        width: 80%;
+        max-width: 250px;
+        margin-top: 15px;
+    }
+
+    .syusei-text {
+        margin-top: 15px;
+    }
+
+    .syusei-text h2 {
+        font-size: 24px;
+    }
+
+    .syusei-text p {
+        font-size: 16px;
+    }
+
+    .ng-codo h2 {
+        font-size: 24px;
+    }
+    .ng-codo p, .ng-codo ul li {
+        font-size: 16px;
+    }
+    .nothabits {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+.syusei-text {
     max-width: 500px;
-    margin-right: 40px;
+    text-align: left;
 }
 
-.reverse {
-    flex-direction: row-reverse;
+.habits {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
-.reverse .feature-text {
-    margin-left: 40px;
+
+/*.習性エリアの設定*/
+
+
+/*テキストエリアの調整*/
+
+
+/*習性の写真の大きさ*/
+
+
+
+
+/*偶数番目のエリアを左右反転*/
+.syusei.reverse {
+    margin-left: auto;
     margin-right: 0;
+    /*margin: 40px auto 40px 0; /* 左寄せ */
 }
 
-.feature-text h2 {
-    font-size: 22px;
+/*左右の余白も反転*/
+.reverse .syusei-text {
+    margin-left: 40px;
+    margin-right: 30px;
+}
+
+/*中見出しのスタイル変更*/
+/*syusei-textクラスのみ*/
+.syusei-text h2 {
+    font-size: 30px;
     font-weight: bold;
     line-height: 30px;
 }
 
-.feature-text h2::after {
-    content: "";
+/*見出しの下に短い下線*/
+/*.syusei-text h2::after {
+    content: '';
     display: block;
     width: 36px;
     height: 3px;
     background-color: #000000;
     margin-top: 20px;
-}
+}*/
 
-.feature-text p {
-    font-size: 15px;
+/*コンセプト分のスタイル調整*/
+/*syusei-textクラスのみ*/
+.syusei-text p {
+    font-size: 20px;
     line-height: 28px;
     margin-top: 25px;
 }
 
-.movie {
+
+/*NG行動*/
+
+
+/*NG行動エリアのスタイル設定*/
+.ng-codo {
     width: 930px;
     max-width: 90%;
-    background-color: #f8f8f8;
+    background-color:#f9e2de;
     padding: 50px 60px;
     margin-top: 55px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.movie h2 {
-    font-size: 22px;
+/*NG行動エリアの見出しのスタイル*/
+/*ねこのいやなこと*/
+.ng-codo h2{
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
 
-.movie h2::after {
-    content: "";
+/*NG行動コメントのスタイル*/
+.ng-codo p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*NG行動の画像*/
+.nothabits {
+    display: block;
+    width: 400px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ng-codo ul{
+    margin-top: 30px;
+    font-size: 20;
+}
+
+/*見出しの下に短い下線*/
+/*.ng-codo h2::after {
+    content: '';
     display: block;
     width: 36px;
     height: 3px;
     background-color: #000000;
     margin-left: auto;
     margin-right: auto;
-}
+}*/
 
-.movie iframe {
+/*NG行動周辺のスタイル設定*/
+.ng-codo iframe {
     display: block;
     width: 100%;
     height: 450px;
     margin-top: 30px;
 }
 
-.movie p {
-    font-size: 15px;
-    line-height: 28px;
-    margin-top: 20px;
+@media(max-width: 800px) {
+
 }
 
-.footer {
+
+/*footerの上部に余白*/
+/*.footer {
     margin-top: 100px;
-}
+}*/
