@@ -16,7 +16,6 @@
     <body>
 
         <!-- ここからheader -->
-
         <header class="header">
             <div class="header-inner">
                 <a class="header-logo" href="index.html">
@@ -37,6 +36,7 @@
                 </div>
             </div>
         </header>
+
         <!-- ここからmain -->
         <main class="main-habits">
             <nav class="floating-habits">
@@ -44,17 +44,19 @@
                     <li><a href="#">上へ</a></li>
                 </ul>
             </nav>
+
+            <!-- first-view -->
             <div class="first-view-habits">
                 <div class="first-view-text-habits">
                     <h1>Habits</h1>
                     <p>ねこの習性</p>
-                    <div class="lead">
+                    <div class="lead-habits">
                         <p>このページではねこの習性やNG行動などについて説明します</p>
                     </div>
                 </div>
             </div>
 
-            <div class="syusei"></div>
+            <div class="syusei">
                 <div class="syusei-text">
                     <h2>高いところが好き</h2>
                     <img src="images/habits/takai.jpg" alt="高いところ" class="habits">
@@ -84,21 +86,57 @@
             </div>
             
 
-            <div class="ng-codo">
-                <h2>ねこのいやなこと</h2>
-                <p>以下のことに気を付けてねこと良好な関係を築こう！！</p>
-                <img src="images/habits/oko_2.jpg" alt="不機嫌" class="nothabits">
-                <ul>
-                    <li>猫が集中しているときに無理やりかまう</li>
-                    <li>猫が嫌がるまでスキンシップする</li>
-                    <li>来客</li>
-                    <li>大きな音</li>
-                    <li>同居猫との不仲</li>
-                    <li>引っ越し</li>
-                    <li>車や電車に乗る</li>
-                    <li>香水や芳香剤</li>
-                </ul>
-            </div>
+<div class="ng-codo">
+    <h2>ねこのいやなこと</h2>
+    <p>以下のことに気を付けてねこと良好な関係を築こう！！</p>
+    <p>チェックボックスを押すとねこの表情がかわるよ！</p>
+    <img id="cat-image" src="images/habits/oko_2.jpg" alt="不機嫌" class="nothabits">
+    <form>
+        <ul>
+            <li><label><input type="checkbox" class="cat-check"> 猫が集中しているときに無理やりかまう</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 猫が嫌がるまでスキンシップする</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 来客</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 大きな音</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 同居猫との不仲</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 引っ越し</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 車や電車に乗る</label></li>
+            <li><label><input type="checkbox" class="cat-check"> 香水や芳香剤</label></li>
+        </ul>
+    </form>
+</div>
+
+<script>
+    const checkboxes = document.querySelectorAll('.cat-check');
+    const catImage = document.getElementById('cat-image');
+
+    function updateImage() {
+        let checkedCount = 0;
+        checkboxes.forEach(cb => {
+            if (cb.checked) checkedCount++;
+        });
+
+        // 条件に応じて画像変更
+        if (checkedCount === 0) {
+            catImage.src = "images/habits/oko_2.jpg"; // 不機嫌
+        } else if (checkedCount <= 3) {
+            catImage.src = "images/habits/human.jpg"; // 少し不満げな猫
+        } else if (checkedCount <= 6) {
+            catImage.src = "images/habits/hutsu.jpg"; // 怖がってる猫
+        } else {
+            catImage.src = "images/habits/egao.jpg"; // 激おこ猫
+        }
+    }
+
+    // チェックボックスの変更を監視
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', updateImage);
+    });
+
+    // 初期画像設定
+    updateImage();
+</script>
+
+
         </main>
 
         <!-- ここからfooter -->
