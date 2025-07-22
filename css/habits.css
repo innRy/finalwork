@@ -106,7 +106,7 @@ img {
 
 .header-logo {
     display: block;
-    width: 170px;
+    width: 100px;
 }
 
 .site-menu ul {
@@ -213,7 +213,7 @@ img {
 }
 .footer {
     color: #ffffff;
-    background-color: #24211b;
+    background-color: #6b4c3b;
     padding-top: 30px;
     padding-bottom: 0px;
     display: flex;

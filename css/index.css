@@ -1,10 +1,19 @@
 @charset "utf-8";
 
+/* 共通リセット */
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 nav.floating {
     position: absolute;
     top: 100px;
     left: 50px;
-    background-color: #d0d0d0;
+    background-color: #faeac4;
 }
 
 .first-view {
@@ -45,14 +54,6 @@ nav.floating {
     margin: 60px auto;
 }
 
-*,
-::before,
-::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 ul, ol {
     list-style: none;
 }
@@ -63,7 +64,7 @@ a {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Kaisei Tokumin", serif;
     font-size: 16pt;
     color: #000000;
     line-height: 1;
@@ -72,6 +73,18 @@ body {
 
 img {
     max-width: 100%;
+}
+
+/* ヘッダー */
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 110px;
+    z-index: 10;
+    box-shadow: none;
 }
 
 .header-inner {
@@ -92,11 +105,15 @@ img {
 
 .header-logo {
     display: block;
-    width: 170px;
+    width: 100px;
+    height: auto;
 }
 
 .site-menu ul {
     display: flex;
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .site-menu ul li {
@@ -105,9 +122,14 @@ img {
 }
 
 .site-menu ul li a {
-    font-family: 'Cherry Bomb One', cursive;
+    font-family: "Kaisei Tokumin", serif !important;
+    font-weight: 400;
+    font-style: normal;
+    color: inherit;
+    text-decoration: none;
 }
 
+/* モバイル対応 */
 @media (max-width: 800px) {
     .site-menu ul {
         display: block;
@@ -119,13 +141,9 @@ img {
     }
 
     .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
+        position: relative;
         height: 50px;
-        z-index: 10;
+        background-color: #ffffff;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     }
 
@@ -141,8 +159,8 @@ img {
         top: 100%;
         left: 0;
         right: 0;
-        color: #ffffff;
         background-color: #736e62;
+        color: #ffffff;
         padding-top: 30px;
         padding-bottom: 50px;
         display: none;
@@ -157,7 +175,7 @@ img {
     }
 
     .main {
-        padding-top: 50px;;
+        padding-top: 50px;
     }
 
     .footer-logo {
@@ -172,6 +190,8 @@ img {
         display: block;
         width: 44px;
         height: 34px;
+        position: absolute;
+        right: 20px;
         background-image: url(../images/common/icon-menu.png);
         background-size: 50%;
         background-position: center;
@@ -182,24 +202,47 @@ img {
         outline: none;
     }
 }
+
+/* フッター */
 .footer {
+    background-color: #6B4C3B;
     color: #ffffff;
-    background-color: #24211b;
-    padding-top: 30px;
-    padding-bottom: 15px;
+    padding: 40px 0;
+    text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .footer-logo {
     display: block;
-    width: 235px;
-    margin-top: 90px;
+    margin: 0 auto 30px auto;
+    width: 120px;
+    height: auto;
+}
+
+.footer .site-menu {
+    margin-bottom: 20px;
+}
+
+.footer .site-menu ul {
+    display: inline-flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer .site-menu a {
+    font-family: "Kaisei Tokumin", serif !important;
+    font-weight: 400;
+    font-style: normal;
+    color: inherit;
+    text-decoration: none;
 }
 
 .copyright {
     font-size: 14pt;
-    font-weight: bold;
-    margin-top: 90px;
+    font-weight: normal;
+    margin-top: 50px;
 }
