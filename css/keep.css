@@ -226,8 +226,8 @@ img{
 }
 
 .footer {
-    color: #ffffff;
-    background-color: #24211b;
+    background-color: #6B4C3B; /* ← おすすめの茶色（こげ茶系） */
+    color: #ffffff; 
     padding-top: 30px;
     padding-bottom: 15px;
     display: flex;
