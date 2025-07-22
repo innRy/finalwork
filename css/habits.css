@@ -4,6 +4,9 @@
 /*ヘッダー*/
 .img {
     max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -158,7 +161,7 @@ img {
     padding-bottom: 50px;
     display: none;
     z-index: 9; /* headerの下に表示させる */
-}
+    }
 
 
     .header-site-menu.is-show {
@@ -180,7 +183,14 @@ img {
     }
 
     .footer-logo {
+        width: 150px;
         margin-top: 60px;
+    }
+
+    .footer-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .copyright {

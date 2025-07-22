@@ -151,15 +151,16 @@ img {
     }
 
     .header-site-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        color: #ffffff;
-        background-color: #736e62;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        display: none;
+    position: fixed; /* ← fixed に変更 */
+    top: 50px; /* ← headerの高さ分下げる */
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #736e62;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+    z-index: 9; /* headerの下に表示させる */
     }
 
     .header-site-menu.is-show {
