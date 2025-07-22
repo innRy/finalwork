@@ -106,7 +106,8 @@ img {
 
 .header-logo {
     display: block;
-    width: 100px;
+    width: 50px;
+    height: auto;
 }
 
 .site-menu ul {
@@ -151,16 +152,16 @@ img {
     }
 
     .header-site-menu {
-    position: fixed; /* ← fixed に変更 */
-    top: 50px; /* ← headerの高さ分下げる */
-    left: 0;
-    right: 0;
-    color: #ffffff;
-    background-color: #736e62;
-    padding-top: 30px;
-    padding-bottom: 50px;
-    display: none;
-    z-index: 9; /* headerの下に表示させる */
+        position: fixed; /* ← fixed に変更 */
+        top: 50px; /* ← headerの高さ分下げる */
+        left: 0;
+        right: 0;
+        color: #ffffff;
+        background-color: #736e62;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: none;
+        z-index: 9; /* headerの下に表示させる */
     }
 
 
@@ -169,7 +170,9 @@ img {
     }
 
     .header-logo {
-        width: 100px;
+        display: block;
+        width: 50px;
+        height: auto;
     }
 
     .header-logo img {
@@ -183,7 +186,7 @@ img {
     }
 
     .footer-logo {
-        width: 150px;
+        width: 50px;
         margin-top: 60px;
     }
 
