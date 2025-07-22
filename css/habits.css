@@ -77,7 +77,7 @@ img {
 }
 
 /* ヘッダー */
-.header {
+/*.header {
     position: relative;
     top: 0;
     left: 0;
@@ -128,10 +128,10 @@ img {
     font-style: normal;
     color: inherit;
     text-decoration: none;
-}
+}*/
 
 /* モバイル対応 */
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     .site-menu ul {
         display: block;
         text-align: center;
@@ -177,6 +177,160 @@ img {
 
     .main {
         padding-top: 50px;
+    }
+
+    .footer-logo {
+        margin-top: 60px;
+    }
+
+    .copyright {
+        margin-top: 50px;
+    }
+
+    .toggle-menu-button {
+        display: block;
+        width: 44px;
+        height: 34px;
+        position: absolute;
+        right: 20px;
+        background-image: url(../images/common/icon-menu.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+}*/
+
+.header {
+    background-color: #ffffff;
+    box-shadow: none;      /* 影もなしでフラットに */
+}
+
+.header-logo {
+    margin-left: 20px;
+}
+
+.header-logo img {
+    height: 50px;      /* ロゴ画像の高さを固定 */
+    width: auto;       /* 幅は画像比率に合わせて調整 */
+    object-fit: contain;
+    display: block;    /* インラインスペース防止 */
+}
+
+header .site-menu ul {
+    list-style-type: none;  /* ← ポチを非表示にする */
+    padding-left: 0;        /* ← 左側の余白もリセット（必要に応じて） */
+    margin: 0;              /* ← デフォルトの余白も消すとスッキリ */
+}
+
+.header-inner {
+  max-width: 1200px;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-menu a {
+    font-family: "Kaisei Tokumin", serif !important;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
+    color: inherit;               /* ← 親要素の色を継承（＝黒などに揃える） */
+    text-decoration: none;  
+}
+
+.site-menu ul {
+  display: flex;
+}
+
+.site-menu ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.title {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: "Kaisei Tokumin",serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 380px;
+    background-image: url(../images/access/S__2195482.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.toggle-menu-button {
+    display: none;
+}
+
+
+@media (max-width: 800px) {
+    .site-menu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .site-menu li {
+        margin-top: 20px;
+    }
+
+    .header {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        height: 70px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+    }
+
+    .header-site-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: #333;
+        background-color: #ffffff;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: none;
+    }
+
+    .header-site-menu.is-show {
+        display: block;
+    }
+
+    .header-logo {
+        width: auto;          /* ← 横幅で調整したい場合のみ指定 */
+        height: 50px;         /* ← 明確に高さを指定してはみ出しを防ぐ */
+        margin-left: 20px;
+        object-fit: contain;
+    }
+
+    .main {
+        padding-top: 50px;;
     }
 
     .footer-logo {
@@ -249,282 +403,6 @@ img {
 }
 
 
-/*ヘッダー*/
-/*.img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-nav.floating {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    background-color: #d0d0d0;
-}
-
-.first-view-habits {
-    height: calc(100vh - 110px);
-    background-image: url(../images/habits/hutsu_big.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-}
-
-.first-view-text-habits {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40ox;
-    padding-bottom: 80px;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #4b2c14;
-}
-
-.first-view-text-habits h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 56px;
-    line-height: 72px;
-}
-
-.first-view-text-habits p {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.lead-habits {
-    max-width: 1200px;
-    margin: 60px auto;
-}
-
-*,
-::before,
-::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-ul, ol {
-    list-style: none;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-body {
-    font-family: sans-serif;
-    font-size: 16pt;
-    color: #000000;
-    line-height: 1;
-    background-color: #ffffff;
-}
-
-img {
-    max-width: 100%;
-}
-
-.header {
-    background-color: #ffffff;
-}
-
-.header-inner {
-    max-width: 1200px;
-    height: 110px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.toggle-menu-button {
-    display: none;
-}
-
-.header-logo {
-    display: block;
-    width: 50px;
-    height: auto;
-}
-
-.site-menu ul {
-    display: flex;
-}
-
-.site-menu ul li {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.site-menu ul li a {
-    font-family: "Kaisei Tokumin", serif !important;
-    font-weight: 400;
-    font-style: normal;
-    color: inherit;
-    text-decoration: none;
-}
-
-@media (max-width: 800px) {
-    .site-menu ul {
-        display: block;
-        text-align: center;
-    }
-
-    .site-menu li {
-        margin-top: 20px;
-    }
-
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
-        height: 50px;
-        z-index: 10;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-inner {
-        padding-left: 20px;
-        padding-right: 20px;
-        height: 100%;
-        position: relative;
-    }
-
-    .header-site-menu {
-
-    position: fixed; /* ← fixed に変更 */
-    /*top: 50px; /* ← headerの高さ分下げる */
-    /*left: 0;
-    right: 0;
-    color: #ffffff;
-    background-color: #736e62;
-    padding-top: 30px;
-    padding-bottom: 50px;
-    display: none;
-    z-index: 9; /* headerの下に表示させる */
-    /*}*/
-
-
-    /*.header-site-menu.is-show {
-
-        position: fixed; /* ← fixed に変更 */
-        top: 50px; /* ← headerの高さ分下げる */
-        left: 0;
-        right: 0;
-        color: #ffffff;
-        background-color: #736e62;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        display: none;
-        z-index: 9; /* headerの下に表示させる */
-    }
-
-    .header-site-menu.is-show {
-
-        display: block;
-    }
-
-    .header-logo {
-        display: block;
-        width: 50px;
-        height: auto;
-    }
-
-    .header-logo img {
-        width: 100%;
-        height:auto;
-        display: block;
-    }
-
-    .main {
-        padding-top: 50px;;
-    }
-
-    .footer-logo {
-        width: 50px;
-        margin-top: 60px;
-    }
-
-    .footer-logo img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .copyright {
-        margin-top: 50px;
-    }
-
-    .toggle-menu-button {
-        display: block;
-        width: 44px;
-        height: 34px;
-        background-image: url(../images/common/icon-menu.png);
-        background-size: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        outline: none;
-    }
-}
-.footer {
-    color: #ffffff;
-    background-color: #6b4c3b;
-    padding-top: 30px;
-    padding-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-logo {
-    display: block;
-    width: 235px;
-    margin-top: 90px;
-}
-
-.copyright {
-    font-size: 14pt;
-    font-weight: bold;
-    margin-top: 90px;
-}
-
-
-.header-inner {
-    max-width: 1200px;
-    height: 110px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/*.toggle-menu-button {
-    display: none;
-}*/
-
-/*.header-logo {
-    display: block;
-    width: 170px;
-}*/
 
 /*header終了*/
 
