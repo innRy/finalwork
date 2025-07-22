@@ -99,9 +99,13 @@ img {
     align-items: center;
 }
 
+.toggle-menu-button {
+    display: none;
+}
+
 .header-logo {
     display: block;
-    width: 170px;
+    width: 100px;
     height: auto;
 }
 
