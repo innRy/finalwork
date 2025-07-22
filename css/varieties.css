@@ -1,7 +1,263 @@
+@charset "utf-8";
+
+
+/*ヘッダー*/
+.img {
+    max-width: 250px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+nav.floating {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: #d0d0d0;
+}
+
+.first-view-varieties {
+    height: calc(100vh - 110px);
+    background-image: url(../images/varieties/hinsyu.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.first-view-text-varieties {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40ox;
+    padding-bottom: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.first-view-text-varieties h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 56px;
+    line-height: 72px;
+}
+
+.first-view-text-varieties p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.lead-varieties {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16pt;
+    color: #000000;
+    line-height: 1;
+    background-color: #61a5b9;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    background-color: #ffffff;
+}
+
+.header-inner {
+    max-width: 1200px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-menu-button {
+    display: none;
+}
+
+.header-logo {
+    display: block;
+    width: 170px;
+}
+
+.site-menu ul {
+    display: flex;
+}
+
+.site-menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.site-menu ul li a {
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+@media (max-width: 800px) {
+    .site-menu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .site-menu li {
+        margin-top: 20px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        height: 50px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+    }
+
+    .header-site-menu {
+    position: fixed; /* ← fixed に変更 */
+    top: 50px; /* ← headerの高さ分下げる */
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #736e62;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+    z-index: 9; /* headerの下に表示させる */
+    }
+
+    .header-site-menu.is-show {
+        display: block;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .header-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .main {
+        padding-top: 50px;;
+    }
+
+    .footer-logo {
+        width: 150px;
+        margin-top: 60px;
+    }
+
+    .footer-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .copyright {
+        margin-top: 50px;
+    }
+
+    .toggle-menu-button {
+        display: block;
+        width: 44px;
+        height: 34px;
+        background-image: url(../images/common/icon-menu.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+}
+.footer {
+    color: #ffffff;
+    background-color: #24211b;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    width: 235px;
+    margin-top: 90px;
+}
+
+.copyright {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 90px;
+}
+
+
+.header-inner {
+    max-width: 1200px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*.toggle-menu-button {
+    display: none;
+}
+*/
+
+.header-logo {
+    display: block;
+    width: 170px;
+}*/
 
 /* 品種のエリア背景 */
 .hinsyu {
-    background-color: #f8f8f8;
+    background-color: #e1f3f8;
     padding-top: 45px;
     padding-bottom: 55px;
 }
@@ -18,35 +274,29 @@
 img {
     width: 250px;
     height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /*国旗の写真の大きさを設定*/
 img.flag {
     width: 30px;
     height: 20px;
-    margin-left: 5px
+    margin-left: 5px;
 }
 
-/* 中見出しに下線を引く準備 */
-.hinsyu h2::after {
-    content: '';
-    display: block;
-    /* 中見出しの下に短い線を引く */
-  
-    width: 36px;
-    height: 3px;
-    background-color: #000000;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+/*国名のスタイル*/
+.country {
+    display: flex;        /* Flexboxコンテナにする */
+    align-items: center;  /* 垂直方向の中央揃え */
+    /* 必要であれば、ここにfont-sizeなどのスタイルを追加できます */
 }
 
 /* 品種リスト */
 .hinsyu-list {
-  
     display: flex;
     padding-top: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 1px;
     padding-left: 60px;
     padding-right: 60px;
   
@@ -57,8 +307,14 @@ img.flag {
 /* 品種を表示する幅 */
 .hinsyu-list li {
     flex-shrink: 0;
-    width: 2000px;
-    margin-left: 100px;
+    width: 300px;
+    margin-left: 20px;
+
+    background-color: #e1f3f8;
+    border-radius: 8px;       /* 角を少し丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+    padding: 20px;            /* カードの内側に余白を作る */
+    margin-bottom: 20px;      /* カードの下に余白を作り、縦方向の区切りを明確にする */
 }
 
 /* １種目の品種の左余白*/
@@ -79,10 +335,21 @@ img.flag {
         padding-right: 20px;
     }
 
-
     /* 品種欄の余白 */
     .hinsyu-list li {
         width: 220px;
-        margin-left: 30px;
+        margin-left: 15px;
+    }
+
+    .hinsyu-list dt {
+        font-size: 17px;
+    }
+
+    .hinsyu-list dd {
+        font-size: 15px;
+    }
+
+    .country {
+        font-size: 15px;
     }
 }

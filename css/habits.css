@@ -4,6 +4,9 @@
 /*ヘッダー*/
 .img {
     max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -14,9 +17,9 @@ nav.floating {
     background-color: #d0d0d0;
 }
 
-.first-view {
+.first-view-habits {
     height: calc(100vh - 110px);
-    background-image: url(../images/index/bg_main.jpg);
+    background-image: url(../images/habits/hutsu_big.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -24,7 +27,7 @@ nav.floating {
     align-items: center;
 }
 
-.first-view-text {
+.first-view-text-habits {
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -36,18 +39,18 @@ nav.floating {
     text-shadow: 1px 1px 10px #4b2c14;
 }
 
-.first-view-text h1 {
+.first-view-text-habits h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 56px;
     line-height: 72px;
 }
 
-.first-view-text p {
+.first-view-text-habits p {
     font-size: 18px;
     margin-top: 20px;
 }
 
-.lead {
+.lead-habits {
     max-width: 1200px;
     margin: 60px auto;
 }
@@ -79,6 +82,10 @@ body {
 
 img {
     max-width: 100%;
+}
+
+.header {
+    background-color: #ffffff;
 }
 
 .header-inner {
@@ -144,16 +151,18 @@ img {
     }
 
     .header-site-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        color: #ffffff;
-        background-color: #736e62;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        display: none;
+    position: fixed; /* ← fixed に変更 */
+    top: 50px; /* ← headerの高さ分下げる */
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #736e62;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+    z-index: 9; /* headerの下に表示させる */
     }
+
 
     .header-site-menu.is-show {
         display: block;
@@ -163,12 +172,25 @@ img {
         width: 100px;
     }
 
+    .header-logo img {
+        width: 100%;
+        height:auto;
+        display: block;
+    }
+
     .main {
         padding-top: 50px;;
     }
 
     .footer-logo {
+        width: 150px;
         margin-top: 60px;
+    }
+
+    .footer-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .copyright {
@@ -193,7 +215,7 @@ img {
     color: #ffffff;
     background-color: #6b4c3b;
     padding-top: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,9 +246,9 @@ img {
     align-items: center;
 }
 
-.toggle-menu-button {
+/*.toggle-menu-button {
     display: none;
-}
+}*/
 
 .header-logo {
     display: block;
@@ -237,6 +259,7 @@ img {
 
 /*ページの最初の大きい画像*/
 .first-view-habits {
+    margin-top: 110px;
     height: calc(100vh - 110px);
     background-image: url(../images/habits/hutsu_big.jpg);
     background-repeat: no-repeat;
@@ -259,18 +282,6 @@ img {
     text-shadow: 1px 1px 10px #4d2c14;
 }
 
-/*タイトルとか*/
-.first-view-text-habits {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-bottom: 80px;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #4b2c14;
-}
 
 /*一番のタイトル*/
 .first-view-text-habits h1 {
@@ -292,13 +303,12 @@ img {
     font-size: 20px;
 }
 
-
-
 /*背景*/
 body {
     background-color: #d6837b;
     margin: 0;
     font-family: sans-serif;
+    color: #412625;
 }
 
 /*カードの位置を制御*/
@@ -316,7 +326,7 @@ body {
 }
 
 .syusei {
-    background-color: #f3d4d1;
+    background-color: #f8e7e6;
     padding: 30px;
     width: 60%; /*カードの幅*/
     border-radius: 20px;
@@ -529,6 +539,10 @@ body {
     width: 100%;
     height: 450px;
     margin-top: 30px;
+}
+
+@media(max-width: 800px) {
+
 }
 
 
