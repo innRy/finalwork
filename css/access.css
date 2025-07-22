@@ -1,17 +1,19 @@
 @charset "utf-8";
 
-.site-menu a {
-    font-family: "Kaisei Tokumin", serif !important;
-    font-weight: 400;
-    font-style: normal;
-    color: inherit;               /* ← 親要素の色を継承（＝黒などに揃える） */
-    text-decoration: none;  
+.header {
+    background-color: #ffffff;
+    box-shadow: none;      /* 影もなしでフラットに */
 }
 
 .header-logo {
-    display: block;
-    width: 100px;         /* お好みで。100〜150pxが一般的 */
-    height: auto;
+    margin-left: 20px;
+}
+
+.header-logo img {
+    height: 50px;      /* ロゴ画像の高さを固定 */
+    width: auto;       /* 幅は画像比率に合わせて調整 */
+    object-fit: contain;
+    display: block;    /* インラインスペース防止 */
 }
 
 header .site-menu ul {
@@ -20,7 +22,6 @@ header .site-menu ul {
     margin: 0;              /* ← デフォルトの余白も消すとスッキリ */
 }
 
-
 .header-inner {
   max-width: 1200px;
   height: 110px;
@@ -28,29 +29,29 @@ header .site-menu ul {
   justify-content: space-between;
   align-items: center;
 }
+
+.site-menu a {
+    font-family: "Kaisei Tokumin", serif !important;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
+    color: inherit;               /* ← 親要素の色を継承（＝黒などに揃える） */
+    text-decoration: none;  
+}
+
 .site-menu ul {
   display: flex;
 }
+
 .site-menu ul li {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.site-menu ul {
-    display: flex;
-}
-
-.site-menu ul li {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-
 .title {
     width: 100%;
-    max-width: 930px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     font-family: "Kaisei Tokumin",serif;
     font-weight: 400;
     font-style: normal;
@@ -79,7 +80,7 @@ header .site-menu ul {
 }
 
 body {
-    background-color: #f5f0dc; /* 全体背景：柔らかいベージュ */
+    background-color:   #f5f5f5; /* 全体背景：柔らかいベージュ */
 }
 
 .activities {
@@ -135,7 +136,7 @@ body {
         left: 0;
         right: 0;
         background-color: #ffffff;
-        height: 50px;
+        height: 70px;
         z-index: 10;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     }
@@ -152,8 +153,8 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        color: #ffffff;
-        background-color: #736e62;
+        color: #333;
+        background-color: #ffffff;
         padding-top: 30px;
         padding-bottom: 50px;
         display: none;
@@ -164,7 +165,10 @@ body {
     }
 
     .header-logo {
-        width: 100px;
+        width: auto;          /* ← 横幅で調整したい場合のみ指定 */
+        height: 50px;         /* ← 明確に高さを指定してはみ出しを防ぐ */
+        margin-left: 20px;
+        object-fit: contain;
     }
 
     .main {
@@ -221,7 +225,7 @@ body {
 }
 
 .footer-logo {
-    display: block;
+    display: inline-block;
     margin: 0 auto 30px auto;  /* ← 上下中央揃え、下に余白を追加 */
     width: 120px;              /* ← 適切なロゴサイズに調整 */
     height: auto;
@@ -235,7 +239,7 @@ body {
 
 footer .site-menu a {
     font-family: "Kaisei Tokumin", serif !important;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     color: inherit;               /* ← 親要素の色を継承（＝黒などに揃える） */
     text-decoration: none;  
