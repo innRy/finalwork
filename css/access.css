@@ -16,13 +16,11 @@
     display: block;    /* インラインスペース防止 */
 }
 
-
 header .site-menu ul {
     list-style-type: none;  /* ← ポチを非表示にする */
     padding-left: 0;        /* ← 左側の余白もリセット（必要に応じて） */
     margin: 0;              /* ← デフォルトの余白も消すとスッキリ */
 }
-
 
 .header-inner {
   max-width: 1200px;
@@ -49,13 +47,6 @@ header .site-menu ul {
   margin-left: 20px;
   margin-right: 20px;
 }
-
-
-.site-menu ul li {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 
 .title {
     width: 100%;
